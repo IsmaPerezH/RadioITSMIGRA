@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "RadioITSMIGRA",
+    "slug": "RadioITSMIGRA",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "radioitsmigra",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/icon.png"
+      },
+      "package": "com.isma_04.RadioITSMIGRA",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "packagingOptions": {
+              "pickFirst": []
+            },
+            "extraProguardRules": "-dontwarn okhttp3.**",
+            "supportedAbis": [
+              "arm64-v8a"
+            ],
+            "enableMinifyInReleaseBuilds": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ba2c6072-2a60-4a92-9b5d-1669a2759f91"
+      }
+    }
+  }
+}
